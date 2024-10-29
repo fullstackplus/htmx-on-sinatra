@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+ruby '3.3.4'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'json'
+gem 'pry'
+gem 'rack-test'
+gem 'puma'

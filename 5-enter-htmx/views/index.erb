@@ -1,0 +1,29 @@
+<body class="viewport-centered">
+  <main>
+    <div class="focus">
+
+      <h1>Join waiting list</h1>
+      <p>Enter your name and email, and we will notify you when the program launches.</p>
+
+      <form hx-post="/">
+        <ol class="user-fields">
+          <li>
+            <label for="name">Name <span class="req">*</span></label>
+            <input name="name" type="text" maxlength="255" tabindex="0" placeholder="Your Name" required>
+          </li>
+
+          <li>
+            <label for="email">Email <span class="req">*</span></label>
+            <input name="email" type="email" maxlength="255" tabindex="0" placeholder="name@email.com" spellcheck="false" required>
+          </li>
+        </ol>
+
+        <button type="submit">
+         <img src="/icons/thumb-up.svg" alt="Notify Me">
+         <span> Notify me! </span>
+       </button>
+      </form>
+
+   </div>
+  </main>
+</body>

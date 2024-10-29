@@ -1,0 +1,43 @@
+<body>
+  <h1>Message #<%= @message.id %></h1>
+  <h2>Hello World</h2>
+
+  <ul class="details">
+    <li>From: joe@example.bar</li>
+    <li>Date: June 2, 2024</li>
+    <li>Status: Read</li>
+  </ul>
+
+  <hr />
+
+  <ul class="actions">
+    <li><a href="/messages/<%= @message.id %>/replies">Reply</a></li>
+
+    <li>
+      <form action="/messages/<%= @message.id %>" method="post">
+        <input type="hidden" name="_method" value="PATCH">
+        <fieldset>
+          <legend>Flag as</legend>
+          <ul>
+            <li>
+              <input type="radio" id="priority" name="flag" value="priority" checked />
+              <label for="priority">priority</label>
+            </li>
+            <li>
+              <input type="radio" id="spam" name="flag" value="spam" />
+              <label for="spam">spam</label>
+            </li>
+            <li>
+              <input type="radio" id="archived" name="flag" value="archived" />
+              <label for="archived">archived</label>
+            </li>
+          </ul>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </li>
+
+    <li><a href="/messages/42">Delete</a></li>
+  </ul>
+</body>
+

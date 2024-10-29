@@ -1,0 +1,157 @@
+/*
+Colors:
+https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Oswald:wght@200..700&display=swap');
+
+html { font-size: 23px; }
+
+body {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+
+ line-height: 1.5;
+ color: #444;
+
+ font-family: "Neuton", serif;
+}
+
+main { flex: 1; }
+
+.viewport-centered {
+ align-items: center;
+ justify-content: center;
+ margin-top: 27vh;
+}
+.text-centered { text-align: center; }
+.no-margin { margin: 0; }
+
+h1 {
+  line-height: 1;
+  margin: .5em 0 0 0;
+
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h1, h1+p { text-align: center; }
+h1+p { margin: 1em 0 2em 0; }
+
+.focus {
+  background: #FFF8D1; /* https://coolors.co/ffeb7f */
+  padding: 1em;
+  border-radius: 10px;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol.user-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+ol.user-fields li {
+  display: flex;
+  align-items: center;
+
+/*  background: #fff;*/
+}
+
+ol.user-fields li:not(:last-of-type) { margin-bottom: .5em }
+
+label {
+  font-size: .8em;
+  text-align: right;
+  display: inline-block;
+  width: 70px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 300px;
+  height: 35px;
+  font-size: .8em;
+  margin-left: .7em;
+  padding: 3px 5px;
+  border: 1px solid #888;
+}
+
+span.req { color: #E53935; }
+
+/* fixme */
+input[type="text"]:focus,
+input[type="email"]:focus {
+  background: ivory;
+  border: 1px solid #B0BEC5;
+}
+
+
+button {
+  font-size: .8em;
+  line-height: 1;
+  text-decoration: none;
+
+  padding: 16px 32px;
+
+  background: green;
+  border: 2px solid #2E7D32;
+  color: #fff;
+
+  cursor: pointer;
+  outline: none;
+
+  display: block;
+  /* width: 90%; */
+
+  width: 400px;
+  margin: 0 auto;
+}
+button span { vertical-align: text-bottom; }
+
+/*
+Alternative hover effect:
+button img { transition: transform 250ms; }
+button:hover img { transform: translateY(-3px); }
+*/
+button:hover img { animation: rotate 1s; }
+@keyframes rotate {
+  0% {
+    animation-timing-function: ease-in;
+    transform: rotate(7deg)
+  }
+  75% {
+    animation-timing-function: ease-out;
+    transform: rotate(-12deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+div.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  margin: 0 auto .3em auto;
+
+  font-size: 3em;
+  border-radius: 50%;
+
+  background: #eee;
+  color: #2E7D32;
+}
+

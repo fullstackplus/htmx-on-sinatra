@@ -1,0 +1,41 @@
+html { font-size: 23px; }
+
+body {
+ display: flex;
+ flex-direction: column;
+}
+
+.viewport-centered {
+ align-items: center;
+ justify-content: center;
+ margin-top: 30vh;
+}
+
+button {
+  font-size: .8em;
+  line-height: 1;
+  text-decoration: none;
+
+  display: inline-block;
+  padding: 16px 32px;
+
+  background: green;
+  border: 2px solid #2E7D32;
+  color: #fff;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

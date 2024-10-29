@@ -1,0 +1,26 @@
+<body>
+
+ <h1>Replying to Message #<%= @message.id %></h1>
+
+  <ul class="actions">
+    <li>
+      <form action="/messages/<%= @message.id %>/replies" method="post">
+        <fieldset>
+          <legend>Reply</legend>
+          <ul>
+            <li>
+              <label for="name">Title:</label> <br />
+              <input type="text" id="title" name="title" required minlength="4" maxlength="20" size="40" />
+            </li>
+            <li>
+              <label for="body">Message:</label> <br />
+                <textarea id="body" name="body" rows="10" cols="45"></textarea>
+            </li>
+          </ul>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </li>
+  </ul>
+
+</body>
